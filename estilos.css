@@ -1,0 +1,65 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    background: cadetblue;
+
+}
+
+#optimogas path:nth-child(1){
+    stroke-dasharray: 100;
+   stroke-dashoffset: 2000;
+   
+ 
+    animation: laranja 15s ease forwards 1;    
+}
+#optimogas path:nth-child(2){
+    stroke-dasharray: 100;
+   stroke-dashoffset: 1000;
+   animation: anima 15s ease forwards 1;
+   
+}
+
+#optimogas path:nth-child(3){
+    stroke-dasharray: 10;
+   stroke-dashoffset: 2000;
+   animation: anima 15s ease forwards 1; 
+ 
+}
+#optimogas path:nth-child(4){
+    opacity: 0;
+    
+   
+    animation: azul 15s ease forwards 1;  
+}
+@keyframes anima{
+    to{
+        stroke-dashoffset: 1000;
+        fill: red;
+        
+    }
+}
+@keyframes azul{
+    
+    to{
+        fill: blue;
+        opacity: 1;
+        
+    }
+}
+@keyframes laranja{
+
+    to{
+        fill: orange;
+    }
+}
+svg{
+    transform-style: preserve-3d;
+}
+svg:hover{
+
+    transform: translateZ(150px) rotateY(800deg);
+}
